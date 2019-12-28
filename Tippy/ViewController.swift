@@ -18,11 +18,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipPercentLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        billField.becomeFirstResponder()
         // Do any additional setup after loading the view.
     }
 
     @IBAction func tipSlider(_ sender: UISlider) {
-        //tipPercentLabel.text=String(format: "%.0f%%" ,sender.value * 100)
         tipValue=Double(round(sender.value)/100)
     }
     
@@ -32,7 +32,7 @@ class ViewController: UIViewController {
     @IBAction func calculateTip(_ sender: Any) {
         let bill=Double(billField.text!) ?? 0
         let tipPercentages=[0.12,0.15,0.18,tipValue]
-        let tipButtons=tipPercentages[tipControl.selectedSegmentIndex]
+        let tipButtons=tipPercentages[tipControl.selectedSegmentIndex];
         let tip=bill * tipButtons
         let total = bill+tip
 
