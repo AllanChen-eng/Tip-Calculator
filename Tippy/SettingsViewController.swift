@@ -9,14 +9,26 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
-
+    @IBOutlet weak var defaultTipSegment: UISegmentedControl!
+    let defaults = UserDefaults.standard
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = " Settings"
+        let intValue = defaults.integer(forKey: "tipIndex")
+        defaultTipSegment.selectedSegmentIndex = intValue;
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onTap(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
+    @IBAction func changeDefaultTip(_ sender: Any) {
+        let defaultTip = defaultTipSegment.selectedSegmentIndex
+        defaults.set(defaultTip, forKey:"tipIndex")
+        defaults.synchronize()
+    }
+    
     /*
     // MARK: - Navigation
 
