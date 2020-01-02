@@ -22,7 +22,6 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [x] Interactive slider for custom tip amounts between 10% and 20%.
-- [x] Segmented views for easy rearrangment of app labels and text boxes.
 
 ## Video Walkthrough 
 
