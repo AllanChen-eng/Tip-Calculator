@@ -27,13 +27,13 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+http://g.recordit.co/zmJTYtDVuz.gif
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with [Recordit](https://recordit.co).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+I attempted to implement a feature where the tip slider would update based on the currently selected segment as well as be set to a value set under the "Settings" page for a default. However, I encountered an issue where this would disable the user's ability to manually change the slider, else it would crash the app.
 
 ## License
 
